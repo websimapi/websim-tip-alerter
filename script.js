@@ -93,8 +93,8 @@ async function main() {
         // Run the first check to establish a baseline of existing tips
         await checkNewTips();
 
-        // Then, set up the polling to check for new tips every minute
-        setInterval(checkNewTips, 60 * 1000);
+        // Then, set up the polling to check for new tips every 15 seconds
+        setInterval(checkNewTips, 15 * 1000);
 
     } catch (error) {
         console.error("Could not initialize tip alerter:", error);
@@ -103,4 +103,3 @@ async function main() {
 }
 
 main();
-
